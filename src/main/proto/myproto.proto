@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.yotpo.productservice.grpc;
+
+message DummyRequest {
+  string param1 = 1;
+}
+
+message DummyResponse {
+  string param2 = 1;
+}
+
+service DummyServer {
+  rpc GetDummy (DummyRequest) returns (DummyResponse) {}
+}
